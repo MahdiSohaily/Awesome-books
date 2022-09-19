@@ -48,3 +48,7 @@ form.addEventListener('submit', (e) => {
   checkStorage();
 });
 
+// Scripts to remove items
+listContainer.addEventListener('click', (e) => {
+    
+})
