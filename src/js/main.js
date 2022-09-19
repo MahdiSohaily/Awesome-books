@@ -53,8 +53,6 @@ form.addEventListener('submit', (e) => {
   const item = new Book(bookTitle, bookAuthor);
   books.push(item);
   localStorage.setItem('books', JSON.stringify(books));
+  listContainer.innerHTML='';
   checkStorage();
 });
-
-// Scripts to remove items
-listContainer.addEventListener('click', (e) => {});
