@@ -9,8 +9,27 @@
 </head>
 <body>
     <main class="full-height">
-        <section class="card">
-
+        <section class="card" aria-labelledby="project-name">
+            <h1 id="project-name">Awesome Books</h1>
+            <div class="books-list">
+                <div class="list-item">
+                    <p>Awesome Book</p>
+                    <p>Mahdi Rezaei</p>
+                    <a href="javascript:void(0)">Remove</a>
+                </div>
+                <div class="list-item">
+                    <p>Awesome Book</p>
+                    <p>Mahdi Rezaei</p>
+                    <a href="javascript:void(0)">Remove</a>
+                </div>
+            </div>
+            <div class="data-form">
+                <form action="javascript:void(0)" method="post">
+                    <input type="text" name="title" id="book-title" aria-label="book-title" placeholder="Title">
+                    <input type="text" name="author" id="book-Author" aria-label="book-Author" placeholder="Author">
+                    <button type="submit">Add</button>
+                </form>
+            </div>
         </section>
     </main>
     <script src="./src/js/main.js"></script>
