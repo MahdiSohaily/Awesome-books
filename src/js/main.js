@@ -13,6 +13,14 @@ function checkStorage() {
     for (item of books) {
       listContainer.innerHTML += createElem(item);
     }
+    let removeBtn = document.querySelectorAll('.remove-button');
+    removeBtn.forEach((e, i) => {
+      e.addEventListener('click', () => {
+        e.parentNode.remove();
+        books.splice(i, 1);
+        localStorage.setItem('books', JSON.stringify(books));
+      });
+    });
   }
 }
 
@@ -28,7 +36,7 @@ function createElem({ title, author }) {
         <div class="list-item">
             <p>${title}</p>
             <p>${author}</p>
-            <ahref="javascript:void(0)">Remove</ahref=>
+            <buuton class="remove-button">Remove</button>
         </div>`;
 }
 
@@ -49,6 +57,4 @@ form.addEventListener('submit', (e) => {
 });
 
 // Scripts to remove items
-listContainer.addEventListener('click', (e) => {
-    
-})
+listContainer.addEventListener('click', (e) => {});
