@@ -72,4 +72,13 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* General styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.card {
+    max-width: min(600px, 95%);
+}
