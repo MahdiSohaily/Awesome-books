@@ -5,15 +5,25 @@ const author = document.getElementById('book-Author');
 const listContainer = document.querySelector('.books-list');
 let books = [];
 
+// a function to create items template
+function createElem({ title, author }) {
+  return `
+        <div class="list-item">
+            <span>${title}</span>
+            <span>${author}</span>
+            <button class="remove-button">Remove</button>
+        </div>`;
+}
+
 // Check for available data at local storage and displaying them
 function checkStorage() {
-  let storage = localStorage.getItem('books');
+  const storage = localStorage.getItem('books');
   if (storage) {
     books = JSON.parse(storage);
-    for (item of books) {
+    books.forEach((item) => {
       listContainer.innerHTML += createElem(item);
-    }
-    let removeBtn = document.querySelectorAll('.remove-button');
+    });
+    const removeBtn = document.querySelectorAll('.remove-button');
     removeBtn.forEach((e, i) => {
       e.addEventListener('click', () => {
         e.parentNode.remove();
@@ -30,16 +40,6 @@ function Book(title, author) {
   this.author = author;
 }
 
-// a function to create items template
-function createElem({ title, author }) {
-  return `
-        <div class="list-item">
-            <span>${title}</span>
-            <span>${author}</span>
-            <button class="remove-button">Remove</button>
-        </div>`;
-}
-
 // Load the data in the local storage
 window.addEventListener('load', () => {
   checkStorage();
@@ -48,11 +48,11 @@ window.addEventListener('load', () => {
 // on the form submit new item will be generated
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  let bookTitle = title.value;
-  let bookAuthor = author.value;
+  const bookTitle = title.value;
+  const bookAuthor = author.value;
   const item = new Book(bookTitle, bookAuthor);
   books.push(item);
   localStorage.setItem('books', JSON.stringify(books));
-  listContainer.innerHTML='';
+  listContainer.innerHTML = '';
   checkStorage();
 });

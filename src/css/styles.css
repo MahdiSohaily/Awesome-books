@@ -72,10 +72,12 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
 /* General styling */
 .full-height {
   height: 100vh;
 }
+
 main {
   display: flex;
   justify-content: center;
@@ -83,5 +85,5 @@ main {
 }
 
 .card {
-  max-width: min(600px, 95%);
+  max-width: 600px;
 }
