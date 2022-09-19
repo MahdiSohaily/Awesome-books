@@ -38,7 +38,7 @@ Open index.html file
 - GitHub: [@MahdiSohaily](https://github.com/MahdiSohaily)
 - Twitter: [@Mahdi_Rezaei_AF](https://twitter.com/Mahdi_Rezaei_AF)
 
- **Oscar Fernández Muñoz**
+ **Alhajideen**
 
 - GitHub: [@Alhajideen](https://github.com/Alhajideen)
 ## 🤝 Contributing
