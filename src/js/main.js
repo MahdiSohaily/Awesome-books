@@ -8,3 +8,10 @@ function Book(title, author) {
   this.title = title;
   this.author = author;
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let bookTitle = title.value;
+    let bookAuthor = author.value;
+    const item = new Book(bookTitle, bookAuthor);
+});
