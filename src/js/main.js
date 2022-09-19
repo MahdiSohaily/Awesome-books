@@ -34,9 +34,9 @@ function Book(title, author) {
 function createElem({ title, author }) {
   return `
         <div class="list-item">
-            <p>${title}</p>
-            <p>${author}</p>
-            <buuton class="remove-button">Remove</button>
+            <span>${title}</span>
+            <span>${author}</span>
+            <button class="remove-button">Remove</button>
         </div>`;
 }
 
