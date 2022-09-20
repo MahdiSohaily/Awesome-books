@@ -1,6 +1,7 @@
 import Book from './Books.js';
-function append(index, { _title: title, _author: author }) {
-  return `
+class BooktoDom {
+  static append(index, { _title: title, _author: author }) {
+    return `
           <tr >
             <th>${Number(index) + 1}</th>
             <td>${title}</td>
@@ -14,31 +15,32 @@ function append(index, { _title: title, _author: author }) {
               </a>
             </td>
           </tr>`;
-}
+  }
 
-function checkStorage(target) {
-  const dataStored = localStorage.getItem('books');
-  if (dataStored) {
-    const books = JSON.parse(dataStored);
-    target.innerHTML = '';
-    for (let key in books) {
-      target.innerHTML += append(key, books[key]);
+  static checkStorage(target) {
+    const dataStored = localStorage.getItem('books');
+    if (dataStored) {
+      const books = JSON.parse(dataStored);
+      target.innerHTML = '';
+      for (let key in books) {
+        target.innerHTML += BooktoDom.append(key, books[key]);
+      }
+      BooktoDom.deleteBook();
+    } else {
+      target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
     }
-    deleteBook();
-  } else {
-    target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
+  }
+
+  static deleteBook() {
+    let delBtn = document.querySelectorAll('.delete-btn');
+    delBtn.forEach((element, index) => {
+      element.addEventListener('click', () => {
+        element.parentNode.parentNode.remove();
+        const books = JSON.parse(localStorage.getItem('books'));
+        books.splice(index, 1);
+        localStorage.setItem('books', JSON.stringify(books));
+      });
+    });
   }
 }
-
-function deleteBook() {
-  let delBtn = document.querySelectorAll('.delete-btn');
-  delBtn.forEach((element, index) => {
-    element.addEventListener('click', () => {
-      element.parentNode.parentNode.remove();
-      const books = JSON.parse(localStorage.getItem('books'));
-      books.splice(index, 1);
-      localStorage.setItem('books', JSON.stringify(books));
-    });
-  });
-}
-export default { append, checkStorage };
+export default BooktoDom;

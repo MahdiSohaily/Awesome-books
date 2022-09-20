@@ -19,7 +19,6 @@ export default class Book {
       books = JSON.parse(dataStored);
     }
     books.push(this);
-    console.log(books)
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
