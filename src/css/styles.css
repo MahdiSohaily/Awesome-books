@@ -43,13 +43,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -104,6 +97,10 @@ select {
   font-size: calc(1.5rem + 0.5vw);
 }
 
+.border {
+  border: 2px solid gray;
+}
+
 /* General styling */
 .full-height {
   height: 100vh;
@@ -119,16 +116,43 @@ main {
   flex: 1;
   max-width: 700px;
   padding: 1rem;
-  background-color: seagreen;
 }
 
 /* table styles */
 
 .table {
   width: 100%;
-  border: 2px solid gray;
 }
 
 td {
   text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.icon {
+  text-decoration: none;
+  margin: 0.35rem;
+}
+
+.data-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-form {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }

@@ -17,7 +17,7 @@
     <main class="full-height">
         <section class="card" aria-labelledby="project-name">
             <h1 id="project-name" class="text-center primary-heading">All Awesome Books</h1>
-            <table class="table my-3">
+            <table class="table my-3 px-3 py-3 border">
                 <thead>
                     <tr>
                         <th>NO</th>
@@ -27,20 +27,21 @@
                     </tr>
                 </thead>
                 <tbody class="books-list">
-                    <tr>
-                        <th></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <!-- Books list will be appended here -->
                 </tbody>
             </table>
             <div class="data-form">
                 <h2 class="text-center secondary-header">Add a new book</h2>
-                <form action="javascript:void(0)" method="post">
-                    <input type="text" name="title" id="book-title" aria-label="book-title" placeholder="Title">
-                    <input type="text" name="author" id="book-Author" aria-label="book-Author" placeholder="Author">
-                    <button type="submit">Add</button>
+                <form action="javascript:void(0)" method="post" class="form">
+                    <div class="form-control my-3">
+                        <input class="input-form border" type="text" name="title" id="book-title" aria-label="book-title" placeholder="Title">
+                    </div>
+                    <div class="form-control my-3">
+                        <input class="input-form border" type="text" name="author" id="book-Author" aria-label="book-Author" placeholder="Author">
+                    </div>
+                    <div class="form-control my-3">
+                        <button type="submit">Add</button>
+                    </div>
                 </form>
             </div>
         </section>

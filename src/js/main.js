@@ -6,15 +6,19 @@ const listContainer = document.querySelector('.books-list');
 let books = [];
 
 // a function to create items template
-function createElem({ title, author}) {
+function createElem({ title, author }) {
   return `
         <tr>
           <th>${1}</th>
           <td>${title}</td>
           <td>${author}</td>
-          <td>
-          <button type="button"> Edit </button> 
-          <button type="button"> Remove </button>
+          <td class="actions">
+            <a class="icon" href="#">
+              <img width="20" height="20" src="./src/icon/edit-icon.svg" alt="edit-icon">
+            </a>
+            <a class="icon" href="#">
+              <img width="20" height="20" src="./src/icon/delete-icon.svg" alt="delete-icon">
+            </a>
           </td>
         </tr>`;
 }
