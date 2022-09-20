@@ -1,5 +1,5 @@
-import Book from './Books.js';
-import BookController from './BookController.js';
+import Book from './modules/Books.js';
+import BookController from './modules/BookController.js';
 // DOM Address to run handel events
 const form = document.querySelector('form');
 const title = document.getElementById('book-title');
