@@ -16,12 +16,10 @@ function append(index, { _title: title, _author: author }) {
           </tr>`;
 }
 
-// function getId() {}
-
-function checkStorage(target, books) {
+function checkStorage(target) {
   const dataStored = localStorage.getItem('books');
   if (dataStored) {
-    books = JSON.parse(dataStored);
+    const books = JSON.parse(dataStored);
     target.innerHTML = '';
     for (let key in books) {
       target.innerHTML += append(key, books[key]);

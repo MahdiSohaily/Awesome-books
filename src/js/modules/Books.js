@@ -11,8 +11,14 @@ export default class Book {
     this._author;
   }
 
-  addBook(storedBooks) {
-    storedBooks.push(this);
-    localStorage.setItem('books', JSON.stringify(storedBooks));
+  addBook() {
+    let dataStored = [];
+    let books = []
+    if (localStorage.getItem('books')) {
+      dataStored = localStorage.getItem('books');
+      books = JSON.parse(dataStored);
+    }
+    books.push(this);
+    localStorage.setItem('books', JSON.stringify(books));
   }
 }

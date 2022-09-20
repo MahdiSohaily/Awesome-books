@@ -5,22 +5,17 @@ const form = document.querySelector('form');
 const title = document.getElementById('book-title');
 const author = document.getElementById('book-Author');
 const listContainer = document.querySelector('.books-list');
-let books = [];
 
 window.addEventListener('load', () => {
-  BookController.checkStorage(listContainer, books);
+  BookController.checkStorage(listContainer);
 });
 
 form.addEventListener('submit', () => {
   const bookTitle = title.value;
   const bookAuthor = author.value;
   const newBook = new Book(bookTitle, bookAuthor);
-  newBook.addBook(books);
-  BookController.checkStorage(listContainer, books);
-});
-
-listContainer.addEventListener('click', (e) => {
-  
-  const dom = e.target.id;
-  console.log(dom);
+  newBook.addBook();
+  BookController.checkStorage(listContainer);
+  title.value = '';
+  author.value = '';
 });
