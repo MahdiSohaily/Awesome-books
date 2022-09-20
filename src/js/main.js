@@ -16,5 +16,5 @@ form.addEventListener('submit', () => {
   const bookAuthor = author.value;
   const newBook = new Book(bookTitle, bookAuthor);
   newBook.addBook(books);
-  listContainer.innerHTML = BookController.checkStorage(listContainer,books)
+  BookController.checkStorage(listContainer,books)
 });

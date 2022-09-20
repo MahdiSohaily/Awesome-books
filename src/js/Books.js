@@ -16,5 +16,6 @@ export default class Book {
   addBook(storedBooks) {
     storedBooks.push(this);
     localStorage.setItem('books', JSON.stringify(storedBooks));
+    console.log(localStorage.getItem('books'))
   }
 }
