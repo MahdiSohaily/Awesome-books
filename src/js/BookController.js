@@ -15,5 +15,16 @@ function append(index, { title, author }) {
           </tr>`;
 }
 
+function checkStorage(target, books) {
+  const dataStored = localStorage.getItem('books');
+  if (dataStored) {
+    books = JSON.parse(dataStored);
+    for (let key in books) {
+        target.innerHTML += append(key, books[key]);
+    }
+  } else {
+    target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
+  }
+}
 
 export default { append, checkStorage };
