@@ -1,3 +1,4 @@
+import Book from './Books.js';
 function append(index, { _title: title, _author: author }) {
   return `
           <tr >
@@ -25,6 +26,7 @@ function checkStorage(target, books) {
     for (let key in books) {
       target.innerHTML += append(key, books[key]);
     }
+    deleteBook();
   } else {
     target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
   }

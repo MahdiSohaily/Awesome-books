@@ -11,16 +11,6 @@ export default class Book {
     this._author;
   }
 
-  deleteBook() {
-    let delBtn = document.querySelectorAll('.delete-btn');
-    console.log(delBtn);
-    delBtn.forEach((e, i) => {
-      e.addEventListener('click', () => {
-        e.parentNode.parentNode.remove();
-      });
-    });
-  }
-
   addBook(storedBooks) {
     storedBooks.push(this);
     localStorage.setItem('books', JSON.stringify(storedBooks));
