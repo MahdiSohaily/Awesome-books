@@ -6,6 +6,7 @@
   --clr-neutral-200: 210 46% 95%;
   --clr-neutral-300: 0 0% 81%;
 }
+
 /* Box sizing rules */
 *,
 *::before,
@@ -17,7 +18,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Barlow Semi Condensed", sans-serif;;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
