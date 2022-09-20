@@ -13,7 +13,7 @@ export default class Book {
 
   addBook() {
     let dataStored = [];
-    let books = []
+    let books = [];
     if (localStorage.getItem('books')) {
       dataStored = localStorage.getItem('books');
       books = JSON.parse(dataStored);
