@@ -1,5 +1,4 @@
-function append(index, title, author) {
-    console.log()
+function append(index, { _title: title, _author: author }) {
   return `
           <tr>
             <th>${Number(index) + 1}</th>
@@ -22,8 +21,7 @@ function checkStorage(target, books) {
     books = JSON.parse(dataStored);
     target.innerHTML = '';
     for (let key in books) {
-      console.log(books[key]);
-      target.innerHTML += append(key, books[key].title, books[key].author);
+      target.innerHTML += append(key, books[key]);
     }
   } else {
     target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
