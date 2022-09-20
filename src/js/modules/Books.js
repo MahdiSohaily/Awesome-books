@@ -8,7 +8,7 @@ export default class Book {
     return this._title;
   }
   get author() {
-    this._author;
+    return this._author;
   }
 
   addBook() {
@@ -19,6 +19,7 @@ export default class Book {
       books = JSON.parse(dataStored);
     }
     books.push(this);
+    console.log(books)
     localStorage.setItem('books', JSON.stringify(books));
   }
 }

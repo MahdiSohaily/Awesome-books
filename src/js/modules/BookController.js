@@ -32,11 +32,11 @@ function checkStorage(target) {
 
 function deleteBook() {
   let delBtn = document.querySelectorAll('.delete-btn');
-  delBtn.forEach((e, i) => {
-    e.addEventListener('click', () => {
-      e.parentNode.parentNode.remove();
+  delBtn.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      element.parentNode.parentNode.remove();
       const books = JSON.parse(localStorage.getItem('books'));
-      books.splice(i, 1);
+      books.splice(index, 1);
       localStorage.setItem('books', JSON.stringify(books));
     });
   });
