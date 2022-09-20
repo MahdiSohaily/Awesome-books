@@ -6,13 +6,17 @@ const listContainer = document.querySelector('.books-list');
 let books = [];
 
 // a function to create items template
-function createElem({ title, author }) {
+function createElem({ title, author}) {
   return `
-        <div class="list-item">
-            <span>${title}</span>
-            <span>${author}</span>
-            <button class="remove-button">Remove</button>
-        </div>`;
+        <tr>
+          <th>${1}</th>
+          <td>${title}</td>
+          <td>${author}</td>
+          <td>
+          <button type="button"> Edit </button> 
+          <button type="button"> Remove </button>
+          </td>
+        </tr>`;
 }
 
 // Check for available data at local storage and displaying them
