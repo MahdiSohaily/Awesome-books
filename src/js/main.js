@@ -8,7 +8,7 @@ const listContainer = document.querySelector('.books-list');
 let books = [];
 
 window.addEventListener('load', () => {
-  BookController.checkStorage(listContainer,books);
+  BookController.checkStorage(listContainer, books);
 });
 
 form.addEventListener('submit', () => {
@@ -16,5 +16,11 @@ form.addEventListener('submit', () => {
   const bookAuthor = author.value;
   const newBook = new Book(bookTitle, bookAuthor);
   newBook.addBook(books);
-  BookController.checkStorage(listContainer,books)
+  BookController.checkStorage(listContainer, books);
+});
+
+listContainer.addEventListener('click', (e) => {
+  
+  const dom = e.target.id;
+  console.log(dom);
 });
