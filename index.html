@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
+
 <body>
     <main class="full-height">
         <section class="card" aria-labelledby="project-name">
-            <h1 id="project-name">Awesome Books</h1>
-            <div class="books-list">
-            </div>
+            <h1 id="project-name" class="text-center primary-heading">All Awesome Books</h1>
+            <table class="table my-3 px-3 py-3 border">
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="books-list">
+                    <!-- Books list will be appended here -->
+                </tbody>
+            </table>
             <div class="data-form">
-                <form action="javascript:void(0)" method="post">
-                    <input type="text" name="title" id="book-title" aria-label="book-title" placeholder="Title">
-                    <input type="text" name="author" id="book-Author" aria-label="book-Author" placeholder="Author">
-                    <button type="submit">Add</button>
+                <h2 class="text-center secondary-header">Add a new book</h2>
+                <form action="javascript:void(0)" method="post" class="form">
+                    <div class="form-control my-3">
+                        <input class="input-form border" type="text" required minlength="3" name="title" id="book-title" aria-label="book-title" placeholder="Title">
+                    </div>
+                    <div class="form-control my-3">
+                        <input class="input-form border" type="text" required minlength="3" name="author" id="book-Author" aria-label="book-Author" placeholder="Author">
+                    </div>
+                    <div class="form-control my-3">
+                        <button type="submit" class="btn border">Add
+                            <img width="20" height="20" class="icon" src="./src/icon/submit-icon.svg" alt="submit-icon">
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>
     </main>
-    <script src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
 </body>
+
 </html>
