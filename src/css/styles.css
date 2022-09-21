@@ -136,6 +136,7 @@ header {
 .nav-menu li a {
   color: var(--clr-secondary-500);
   font-weight: bold;
+  text-decoration: none;
 }
 
 /* General styling */
@@ -146,7 +147,7 @@ header {
 main {
   display: flex;
   justify-content: center;
-  padding-top: 7rem ;
+  padding-top: 7rem;
 }
 
 .card {
