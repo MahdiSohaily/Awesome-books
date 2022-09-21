@@ -102,29 +102,13 @@ select {
   border: 2px solid gray;
 }
 
-/* General styling */
-.full-height {
-  height: 100vh;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  flex: 1;
-  max-width: 700px;
-  padding: 1rem;
-}
-
 /* Main header section styles */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   box-shadow: 2px 2px 5px var(--clr-neutral-300);
+  background-color: white;
 }
 
 .main-header {
@@ -152,6 +136,23 @@ header {
 .nav-menu li a {
   color: var(--clr-secondary-500);
   font-weight: bold;
+}
+
+/* General styling */
+.full-height {
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 7rem ;
+}
+
+.card {
+  flex: 1;
+  max-width: 700px;
+  padding: 1rem;
 }
 
 /* table styles */
