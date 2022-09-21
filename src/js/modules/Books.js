@@ -21,4 +21,7 @@ export default class Book {
     books.push(this);
     localStorage.setItem('books', JSON.stringify(books));
   }
+  deleteBook() {
+
+  }
 }
