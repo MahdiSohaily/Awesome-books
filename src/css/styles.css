@@ -124,7 +124,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 2px 2px 5px gray;
+  box-shadow: 2px 2px 5px var(--clr-neutral-300);
 }
 
 .main-header {
