@@ -22,6 +22,14 @@ export default class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
   deleteBook() {
-
+    let delBtn = document.querySelectorAll('.delete-btn');
+    delBtn.forEach((element, index) => {
+      element.addEventListener('click', () => {
+        element.parentNode.parentNode.remove();
+        const books = JSON.parse(localStorage.getItem('books'));
+        books.splice(index, 1);
+        localStorage.setItem('books', JSON.stringify(books));
+      });
+    });
   }
 }
