@@ -26,5 +26,18 @@ export default class List {
     return this._content;
   }
 
+  active() {
+    const dataStored = localStorage.getItem('books');
+    const books = JSON.parse(dataStored);
+    const listContainer = document.querySelector('.books-list');
+    if (books) {
+      for (const item in books) {
+        listContainer.innerHTML += BooktoDom.append(item, books[item]);
+      }
+    } else {
+      listContainer.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
+    }
+  }
   
+ 
 }
