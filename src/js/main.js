@@ -6,6 +6,10 @@ import Form from './components/Form.js';
 // new DOM Elements
 const pages = document.querySelectorAll('.list-item');
 const container = document.getElementById('app');
+const myList = new List();
+container.innerHTML = myList.content;
+myList.active();
+myList.deleteBook();
 
 pages.forEach((item) => {
   item.addEventListener('click', (e) => {
@@ -36,6 +40,8 @@ pages.forEach((item) => {
       default: {
         const defaultPage = new List();
         container.innerHTML = defaultPage.content;
+        defaultPage.active();
+        defaultPage.deleteBook();
       }
     }
   });
