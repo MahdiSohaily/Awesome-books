@@ -1,3 +1,4 @@
+import Book from '../modules/Books.js';
 export default class Form {
   constructor() {
     this._content = `
@@ -21,8 +22,23 @@ export default class Form {
         </section>
         `;
   }
-
   get content() {
     return this._content;
+  }
+
+  active() {
+    const form = document.querySelector('form');
+    const title = document.getElementById('book-title');
+    const author = document.getElementById('book-Author');
+
+    form.addEventListener('submit', () => {
+      const bookTitle = title.value;
+      const bookAuthor = author.value;
+      const newBook = new Book(bookTitle, bookAuthor);
+      newBook.addBook();
+      console.log(newBook);
+      title.value = '';
+      author.value = '';
+    });
   }
 }
