@@ -3,20 +3,14 @@ export default class Contact {
     this._content = `
         <section class="card" aria-labelledby="project-name">
             <h1 id="project-name" class="text-center primary-heading">Contact Information</h1>
-            <table class="table my-3 px-3 py-3 border">
-                <thead>
-                    <tr>
-                        <th>NO</th>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody class="books-list">
-                    <!-- Books list will be appended here -->
-                </tbody>
-            </table>
-          
+          <div className="into">
+          <h2 class="secondary-heading">Find the best answer to your technical question, Reach out to us through the following contacts:</h2>
+          <ul class="my-3">
+          <li>Our email: Mahdi@gmail.af</li>
+          <li>Our phone number: +2349182566</li>
+          <li>Our Address: Lorem ipsum dolor sit amet.</li>
+          </ul>
+          </div>
         </section>
         `;
   }
