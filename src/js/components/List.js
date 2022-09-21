@@ -1,4 +1,5 @@
 import BooktoDom from '../modules/BookController.js';
+
 export default class List {
   constructor() {
     this._content = `
@@ -35,8 +36,7 @@ export default class List {
         listContainer.innerHTML += BooktoDom.append(item, books[item]);
       }
     } else {
-      listContainer.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
+      listContainer.innerHTML = '<tr> <td colspan="4">Nothing to show </td> <tr>';
     }
   }
-  
 }

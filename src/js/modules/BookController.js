@@ -1,4 +1,5 @@
 import Book from './Books.js';
+
 function append(index, { _title: title, _author: author }) {
   return `
           <tr >
@@ -21,17 +22,17 @@ function checkStorage(target) {
   if (dataStored) {
     const books = JSON.parse(dataStored);
     target.innerHTML = '';
-    for (let key in books) {
+    for (const key in books) {
       target.innerHTML += append(key, books[key]);
     }
     deleteBook();
   } else {
-    target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
+    target.innerHTML = '<tr> <td colspan="4">Nothing to show </td> <tr>';
   }
 }
 
 function deleteBook() {
-  let delBtn = document.querySelectorAll('.delete-btn');
+  const delBtn = document.querySelectorAll('.delete-btn');
   delBtn.forEach((element, index) => {
     element.addEventListener('click', () => {
       element.parentNode.parentNode.remove();

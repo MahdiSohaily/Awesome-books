@@ -7,6 +7,7 @@ export default class Book {
   get title() {
     return this._title;
   }
+
   get author() {
     return this._author;
   }
@@ -21,8 +22,9 @@ export default class Book {
     books.push(this);
     localStorage.setItem('books', JSON.stringify(books));
   }
+
   deleteBook() {
-    let delBtn = document.querySelectorAll('.delete-btn');
+    const delBtn = document.querySelectorAll('.delete-btn');
     delBtn.forEach((element, index) => {
       element.addEventListener('click', () => {
         element.parentNode.parentNode.remove();

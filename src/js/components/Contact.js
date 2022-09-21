@@ -20,7 +20,7 @@ export default class Contact {
         </section>
         `;
   }
-  
+
   get content() {
     return this._content;
   }

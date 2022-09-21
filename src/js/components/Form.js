@@ -1,4 +1,5 @@
 import Book from '../modules/Books.js';
+
 export default class Form {
   constructor() {
     this._content = `
@@ -22,6 +23,7 @@ export default class Form {
         </section>
         `;
   }
+
   get content() {
     return this._content;
   }
