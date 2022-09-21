@@ -1,6 +1,6 @@
 export default class Form {
-    constructor () {
-        this.content = `
+  constructor() {
+    this._content = `
         <section class="card" aria-labelledby="project-name">
             <div class="data-form">
                 <h2 class="text-center secondary-header">Add a new book</h2>
@@ -19,6 +19,10 @@ export default class Form {
                 </form>
                 </div>
         </section>
-        `
-    }
+        `;
+  }
+
+  get content() {
+    return this._content;
+  }
 }

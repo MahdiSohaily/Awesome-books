@@ -1,6 +1,6 @@
 export default class List {
-    constructor () {
-        this.content = `
+  constructor() {
+    this._content = `
         <section class="card" aria-labelledby="project-name">
             <h1 id="project-name" class="text-center primary-heading">All Awesome Books</h1>
             <table class="table my-3 px-3 py-3 border">
@@ -18,6 +18,10 @@ export default class List {
             </table>
           
         </section>
-        `
-    }
+        `;
+  }
+
+  get content() {
+    return this._content;
+  }
 }
