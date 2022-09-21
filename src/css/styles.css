@@ -1,10 +1,10 @@
 :root {
-  --clr-primary-400: 263 55% 52%;
-  --clr-secondary-400: 217 19% 35%;
-  --clr-secondary-500: 219 29% 14%;
-  --clr-neutral-100: 0 0% 100%;
-  --clr-neutral-200: 210 46% 95%;
-  --clr-neutral-300: 0 0% 81%;
+  --clr-primary-400: hsl(263 55% 52%);
+  --clr-secondary-400: hsl(217 19% 35%);
+  --clr-secondary-500: hsl(219 29% 14%);
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(210 46% 95%);
+  --clr-neutral-300: hsl(0 0% 81%);
 }
 
 /* Box sizing rules */
@@ -18,7 +18,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -41,7 +41,7 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  text-decoration: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -117,6 +117,41 @@ main {
   flex: 1;
   max-width: 700px;
   padding: 1rem;
+}
+
+/* Main header section styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.main-header {
+  max-width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.logo {
+  color: var(--clr-primary-400);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu li a {
+  color: var(--clr-secondary-500);
+  font-weight: bold;
 }
 
 /* table styles */
