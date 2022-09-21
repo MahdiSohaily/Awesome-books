@@ -1,5 +1,6 @@
 import Book from './Books.js';
-class BooktoDom {
+
+export default class BooktoDom {
   static append(index, { _title: title, _author: author }) {
     return `
           <tr >
@@ -30,9 +31,8 @@ class BooktoDom {
       target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
     }
   }
-
-  static deleteBook() {
-    let delBtn = document.querySelectorAll('.delete-btn');
+  deleteBook() {
+    const delBtn = document.querySelectorAll('.delete-btn');
     delBtn.forEach((element, index) => {
       element.addEventListener('click', () => {
         element.parentNode.parentNode.remove();
@@ -43,4 +43,3 @@ class BooktoDom {
     });
   }
 }
-export default BooktoDom;

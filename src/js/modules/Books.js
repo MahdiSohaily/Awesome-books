@@ -7,6 +7,7 @@ export default class Book {
   get title() {
     return this._title;
   }
+
   get author() {
     return this._author;
   }
@@ -21,4 +22,6 @@ export default class Book {
     books.push(this);
     localStorage.setItem('books', JSON.stringify(books));
   }
+
+  
 }
