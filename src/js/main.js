@@ -45,4 +45,3 @@ pages.forEach((item) => {
       }
     }
   });
-});
