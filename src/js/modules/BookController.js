@@ -1,6 +1,6 @@
 import Book from './Books.js';
 
-class BooktoDom {
+export default class BooktoDom {
   static append(index, { _title: title, _author: author }) {
     return `
           <tr >
@@ -31,16 +31,15 @@ class BooktoDom {
       target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
     }
   }
-function deleteBook() {
-  const delBtn = document.querySelectorAll('.delete-btn');
-  delBtn.forEach((element, index) => {
-    element.addEventListener('click', () => {
-      element.parentNode.parentNode.remove();
-      const books = JSON.parse(localStorage.getItem('books'));
-      books.splice(index, 1);
-      localStorage.setItem('books', JSON.stringify(books));
-
+  deleteBook() {
+    const delBtn = document.querySelectorAll('.delete-btn');
+    delBtn.forEach((element, index) => {
+      element.addEventListener('click', () => {
+        element.parentNode.parentNode.remove();
+        const books = JSON.parse(localStorage.getItem('books'));
+        books.splice(index, 1);
+        localStorage.setItem('books', JSON.stringify(books));
+      });
     });
   }
 }
-export default BooktoDom;
