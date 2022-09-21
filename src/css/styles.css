@@ -201,3 +201,16 @@ td {
   margin-inline: auto;
   padding: 0.25rem 2rem;
 }
+
+/* footer styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  background-color: var(--clr-secondary-400);
+}
+
+footer p {
+  color: var(--clr-neutral-300);
+}
