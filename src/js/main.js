@@ -44,5 +44,5 @@ pages.forEach((item) => {
         defaultPage.deleteBook();
       }
     }
-  })
+  });
 });
