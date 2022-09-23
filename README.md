@@ -41,7 +41,7 @@ Open index.html file
  **nurudeen**
 
 - GitHub: [@Alhajideen](https://github.com/Alhajideen)
--Email : <devjs.nurudeen@gmail.com>
+- Email : <devjs.nurudeen@gmail.com>
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
