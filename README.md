@@ -38,9 +38,10 @@ Open index.html file
 - GitHub: [@MahdiSohaily](https://github.com/MahdiSohaily)
 - Twitter: [@Mahdi_Rezaei_AF](https://twitter.com/Mahdi_Rezaei_AF)
 
- **Alhajideen**
+ **nurudeen**
 
 - GitHub: [@Alhajideen](https://github.com/Alhajideen)
+-Email : <devjs.nurudeen@gmail.com>
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
