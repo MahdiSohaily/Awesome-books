@@ -29,7 +29,7 @@ pages.forEach((item) => {
     const page = e.target.getAttribute('data-display');
     switch (page) {
       case 'list':
-          defaultDisplay();
+        defaultDisplay();
         break;
       case 'form':
         {
@@ -45,7 +45,7 @@ pages.forEach((item) => {
           container.innerHTML = myContact.content;
         }
         break;
-      default: 
+      default:
         defaultDisplay();
     }
   });
