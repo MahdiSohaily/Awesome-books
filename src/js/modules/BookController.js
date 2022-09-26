@@ -3,15 +3,15 @@ import Book from './Books.js';
 export default class BooktoDom {
   static append(index, { _title: title, _author: author }) {
     return `
-          <tr >
-            <th>${Number(index) + 1}</th>
+          <tr class='clearfix'>
+            <td>${Number(index) + 1}</td>
             <td>${title}</td>
             <td>${author}</td>
             <td class="actions">
-              <a class="icon" href="#">
+              <a class="icon edit-btn" href="#" data-edit="id=${index}" title="Edit">
                 <img width="20" height="20" src="./src/icon/edit-icon.svg" alt="edit-icon">
               </a>
-              <a class="icon delete-btn" href="#" id=${index}>
+              <a class="icon delete-btn" href="#" id=${index} title="Remove">
                 <img width="20" height="20" src="./src/icon/delete-icon.svg" alt="delete-icon">
               </a>
             </td>

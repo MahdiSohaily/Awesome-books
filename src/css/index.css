@@ -174,10 +174,23 @@ main {
 /* table styles */
 .table {
   width: 100%;
+  border-spacing: 0;
+}
+
+tr {
+  height: 50px;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: lightblue;
+  background-color: rgb(239, 239, 239);
+}
+
+tbody tr:nth-child(even):hover {
+  background-color: rgb(247, 246, 246);
+}
+
+tbody tr:nth-child(odd):hover {
+  background-color: rgb(228, 227, 227);
 }
 
 td {
@@ -195,6 +208,11 @@ td {
   margin: 0.35rem;
 }
 
+.clearfix {
+  overflow: hidden;
+}
+
+/* form section styles */
 .data-form {
   display: flex;
   justify-content: center;
