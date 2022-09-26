@@ -18,7 +18,7 @@ const defaultDisplay = () => {
   const myList = new List();
   container.innerHTML = myList.content;
   myList.displayData();
-}
+};
 
 // call default Display function to load the initial display page on load
 defaultDisplay();
