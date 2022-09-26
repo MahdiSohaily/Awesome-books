@@ -52,5 +52,4 @@ function defaultDisplay() {
   const myList = new List();
   container.innerHTML = myList.content;
   myList.displayData();
-  myList.deleteBook();
 }

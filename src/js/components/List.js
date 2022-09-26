@@ -54,6 +54,7 @@ export default class List {
       for (const item in books) {
         listContainer.innerHTML += this.append(item, books[item]);
       }
+      this.deleteBook();
     } else {
       listContainer.innerHTML = '<tr><td colspan="4">Nothing to show </td><tr>';
     }
@@ -62,12 +63,16 @@ export default class List {
   // A function to delete indicated element from local storage and DOM tree
   deleteBook() {
     const delBtn = document.querySelectorAll('.delete-btn');
+    const listContainer = document.querySelector('.books-list');
     delBtn.forEach((element, index) => {
       element.addEventListener('click', () => {
         element.parentNode.parentNode.remove();
         const books = JSON.parse(localStorage.getItem('books'));
         books.splice(index, 1);
         localStorage.setItem('books', JSON.stringify(books));
+        listContainer.innerHTML = '';
+        this.displayData();
+        this.deleteBook();
       });
     });
   }
