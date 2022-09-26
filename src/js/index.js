@@ -15,6 +15,7 @@ console.log(now.year)
 // call default Display function to load the initial display page on load
 defaultDisplay();
 
+// Add event to check user intended page 
 pages.forEach((item) => {
   item.addEventListener('click', (e) => {
     const page = e.target.getAttribute('data-display');
@@ -45,6 +46,7 @@ pages.forEach((item) => {
   });
 });
 
+// function to create new object of default display module
 function defaultDisplay() {
   const myList = new List();
   container.innerHTML = myList.content;
