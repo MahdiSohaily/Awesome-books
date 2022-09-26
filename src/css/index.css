@@ -104,6 +104,11 @@ select {
 
 .text-right {
   text-align: right;
+  color: var(--clr-secondary-400);
+}
+
+.bg-primary {
+  background-color: var(--clr-primary-400);
 }
 
 /* Main header section styles */
@@ -167,9 +172,12 @@ main {
 }
 
 /* table styles */
-
 .table {
   width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightblue;
 }
 
 td {
