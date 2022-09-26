@@ -42,7 +42,7 @@ export default class List {
           </tr>`;
   }
 
-  active() {
+  displayData() {
     const dataStored = localStorage.getItem('books');
     const books = JSON.parse(dataStored);
     const listContainer = document.querySelector('.books-list');

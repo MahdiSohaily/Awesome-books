@@ -51,6 +51,6 @@ pages.forEach((item) => {
 function defaultDisplay() {
   const myList = new List();
   container.innerHTML = myList.content;
-  myList.active();
+  myList.displayData();
   myList.deleteBook();
 }
