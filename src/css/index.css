@@ -120,7 +120,7 @@ header {
   background-color: white;
 }
 
-.container{
+.container {
   max-width: 90%;
   margin-inline: auto;
 }
@@ -238,6 +238,23 @@ td {
   width: 80px;
   margin-inline: auto;
   padding: 0.25rem 2rem;
+}
+
+/* Form submission message */
+.relative {
+  position: relative;
+}
+
+.message {
+  display: inline-block;
+  background-color: seagreen;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 18px 100px;
+  border-radius: 4px;
+  color: white;
 }
 
 /* footer styles */

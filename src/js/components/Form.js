@@ -1,9 +1,10 @@
 import Book from '../modules/Books.js';
 
 export default class Form {
+  // constructor function to set HTML data of the corresponding page
   constructor() {
     this._content = `
-        <section class="card" aria-labelledby="project-name">
+        <section class="card relative" aria-labelledby="project-name">
             <div class="data-form">
                 <h2 class="text-center secondary-header">Add a new book</h2>
                 <form action="javascript:void(0)" method="post" class="form">
@@ -20,14 +21,17 @@ export default class Form {
                     </div>
                 </form>
                 </div>
+                <p class='message'></p>
         </section>
         `;
   }
 
+  // getter function to get data of this page to be displayed when intended
   get content() {
     return this._content;
   }
 
+  // a function to check gor the form submission
   active() {
     const form = document.querySelector('form');
     const title = document.getElementById('book-title');
@@ -42,5 +46,10 @@ export default class Form {
       title.value = '';
       author.value = '';
     });
+  }
+
+  successMessage(message) {
+    const submitMessage = document.querySelector('.message');
+    submitMessage.innerHTML = message;
   }
 }
