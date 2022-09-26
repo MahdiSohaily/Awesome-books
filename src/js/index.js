@@ -13,6 +13,13 @@ const date = document.querySelector('.date');
 const currentDate = DateTime.now();
 date.innerHTML = currentDate.toFormat('DDD t');
 
+// function to create new object of default display module
+function defaultDisplay() {
+  const myList = new List();
+  container.innerHTML = myList.content;
+  myList.displayData();
+}
+
 // call default Display function to load the initial display page on load
 defaultDisplay();
 
@@ -22,9 +29,7 @@ pages.forEach((item) => {
     const page = e.target.getAttribute('data-display');
     switch (page) {
       case 'list':
-        {
           defaultDisplay();
-        }
         break;
       case 'form':
         {
@@ -40,16 +45,8 @@ pages.forEach((item) => {
           container.innerHTML = myContact.content;
         }
         break;
-      default: {
+      default: 
         defaultDisplay();
-      }
     }
   });
 });
-
-// function to create new object of default display module
-function defaultDisplay() {
-  const myList = new List();
-  container.innerHTML = myList.content;
-  myList.displayData();
-}
