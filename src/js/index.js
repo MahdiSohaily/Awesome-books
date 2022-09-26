@@ -4,11 +4,15 @@ import Contact from './components/Contact.js';
 import Form from './components/Form.js';
 import { DateTime } from "./modules/luxion.js";
 
-// new DOM Elements
+// DOM reference of page interaction API's
 const pages = document.querySelectorAll('.list-item');
 const container = document.getElementById('app');
+
+// Load current date and time using luxion library
 const now = DateTime.now();
 console.log(now.year)
+
+// call default Display function to load the initial display page on load
 defaultDisplay();
 
 pages.forEach((item) => {
