@@ -2,7 +2,7 @@
 import List from './components/List.js';
 import Contact from './components/Contact.js';
 import Form from './components/Form.js';
-import { DateTime } from "./modules/luxion.js";
+import { DateTime } from './modules/luxion.js';
 
 // DOM reference of page interaction API's
 const pages = document.querySelectorAll('.list-item');
@@ -10,12 +10,14 @@ const container = document.getElementById('app');
 
 // Load current date and time using luxion library
 const now = DateTime.now();
-console.log(now.year)
+now.monthShort
+var f = { month: 'long', day: 'numeric', year: 'numeric' };
+console.log(now.monthLong);
 
 // call default Display function to load the initial display page on load
 defaultDisplay();
 
-// Add event to check user intended page 
+// Add event to check user intended page
 pages.forEach((item) => {
   item.addEventListener('click', (e) => {
     const page = e.target.getAttribute('data-display');

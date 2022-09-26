@@ -111,9 +111,12 @@ header {
   background-color: white;
 }
 
-.main-header {
+.container{
   max-width: 90%;
   margin-inline: auto;
+}
+
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,9 +148,12 @@ header {
 }
 
 main {
+  padding-top: 7rem;
+}
+
+.flex-center {
   display: flex;
   justify-content: center;
-  padding-top: 7rem;
 }
 
 .card {

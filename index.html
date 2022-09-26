@@ -15,21 +15,29 @@
 
 <body>
     <header>
-        <nav class="main-header">
+        <nav class="main-header container">
             <a class="logo" href="javascript:void(0)">Awesome Book</a>
             <ul class="nav-menu">
                 <li><a class="list-item" href="javascript:void(0)" data-display="list">List</a></li>
                 <li><a class="list-item" href="javascript:void(0)" data-display="form">Add New</a></li>
                 <li><a class="list-item" href="javascript:void(0)" data-display="contact">Contact</a></li>
-                
+
             </ul>
         </nav>
     </header>
-    <main id="app" class="full-height">
+    <main class="full-height">
+        <div class="container">
+            <p>
+                Date and time
+            </p>
+        </div>
+        <div id="app" class="flex-center"></div>
         <!-- New data are going to be displayed here -->
     </main>
     <footer>
-        <p>Copy Right are reserved</p>
+        <div class="container">
+            <p>Copy Right are reserved</p>
+        </div>
     </footer>
     <script type="module" src="./src/js/index.js"></script>
 </body>
