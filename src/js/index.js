@@ -7,12 +7,11 @@ import { DateTime } from './modules/luxion.js';
 // DOM reference of page interaction API's
 const pages = document.querySelectorAll('.list-item');
 const container = document.getElementById('app');
+const date = document.querySelector('.date');
 
 // Load current date and time using luxion library
-const now = DateTime.now();
-now.monthShort
-var f = { month: 'long', day: 'numeric', year: 'numeric' };
-console.log(now.monthLong);
+const currentDate = DateTime.now();
+date.innerHTML = currentDate.toFormat('DDD t');
 
 // call default Display function to load the initial display page on load
 defaultDisplay();

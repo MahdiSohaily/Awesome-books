@@ -102,6 +102,10 @@ select {
   border: 2px solid gray;
 }
 
+.text-right {
+  text-align: right;
+}
+
 /* Main header section styles */
 header {
   position: fixed;
