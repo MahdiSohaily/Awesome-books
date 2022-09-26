@@ -42,7 +42,7 @@ export default class Form {
       const bookAuthor = author.value;
       const newBook = new Book(bookTitle, bookAuthor);
       newBook.addBook();
-      console.log(newBook);
+      this.successMessage('New Data Inserted Successfully');
       title.value = '';
       author.value = '';
     });
@@ -50,6 +50,10 @@ export default class Form {
 
   successMessage(message) {
     const submitMessage = document.querySelector('.message');
+    submitMessage.classList.add('showMessage');
+    setTimeout(() => {
+      submitMessage.classList.remove('showMessage')
+    }, 2000)
     submitMessage.innerHTML = message;
   }
 }
