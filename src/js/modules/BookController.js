@@ -18,7 +18,7 @@ export default class BooktoDom {
           </tr>`;
   }
 
-  static checkStorage(target) {
+  static checkStorage = (target) => {
     const dataStored = localStorage.getItem('books');
     if (dataStored) {
       const books = JSON.parse(dataStored);
@@ -30,8 +30,8 @@ export default class BooktoDom {
     } else {
       target.innerHTML = `<tr> <td colspan="4">Nothing to show </td> <tr>`;
     }
-  }
-  deleteBook() {
+  };
+  deleteBook = () => {
     const delBtn = document.querySelectorAll('.delete-btn');
     delBtn.forEach((element, index) => {
       element.addEventListener('click', () => {
@@ -41,5 +41,5 @@ export default class BooktoDom {
         localStorage.setItem('books', JSON.stringify(books));
       });
     });
-  }
+  };
 }

@@ -4,7 +4,7 @@ const title = document.getElementById('book-title');
 const author = document.getElementById('book-Author');
 const listContainer = document.querySelector('.books-list');
 let books = [];
-function createElem({ title, author }) {
+createElem = ({ title, author }) => {
   return `
           <tr>
             <th>${1}</th>
@@ -19,10 +19,10 @@ function createElem({ title, author }) {
               </a>
             </td>
           </tr>`;
-}
+};
 
 // Check for available data at local storage and displaying them
-function checkStorage() {
+checkStorage = () => {
   const storage = localStorage.getItem('books');
   if (storage) {
     books = JSON.parse(storage);
@@ -38,10 +38,10 @@ function checkStorage() {
       });
     });
   }
-}
+};
 
 // Object Constructor function
-function Book(title, author) {
+Book = (title, author) => {
   this.title = title;
   this.author = author;
 }

@@ -31,7 +31,7 @@ export default class Form {
   }
 
   // a function to check gor the form submission
-  active() {
+  active = () => {
     const form = document.querySelector('form');
     const title = document.getElementById('book-title');
     const author = document.getElementById('book-Author');
@@ -47,7 +47,7 @@ export default class Form {
     });
   }
 
-  successMessage(message) {
+  successMessage = (message) => {
     const submitMessage = document.querySelector('.message');
     submitMessage.classList.add('showMessage');
     setTimeout(() => {

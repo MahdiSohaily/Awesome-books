@@ -12,7 +12,7 @@ export default class Book {
     return this._author;
   }
 
-  addBook() {
+  addBook = () => {
     let dataStored = [];
     let books = [];
     if (localStorage.getItem('books')) {
@@ -21,5 +21,5 @@ export default class Book {
     }
     books.push(this);
     localStorage.setItem('books', JSON.stringify(books));
-  }
+  };
 }

@@ -28,7 +28,7 @@ export default class List {
   }
 
   // Function to return stored data in the HTML format
-  append(index, { _title: title, _author: author }) {
+  append = (index, { _title: title, _author: author }) => {
     return `
           <tr class='clearfix'>
             <td>${Number(index) + 1}</td>
@@ -43,10 +43,10 @@ export default class List {
               </a>
             </td>
           </tr>`;
-  }
+  };
 
   // A function to display stored data in the HTML format in the List page
-  displayData() {
+  displayData = () => {
     const dataStored = localStorage.getItem('books');
     const books = JSON.parse(dataStored);
     const listContainer = document.querySelector('.books-list');
@@ -58,10 +58,10 @@ export default class List {
     } else {
       listContainer.innerHTML = '<tr><td colspan="4">Nothing to show </td><tr>';
     }
-  }
+  };
 
   // A function to delete indicated element from local storage and DOM tree
-  deleteBook() {
+  deleteBook = () => {
     const delBtn = document.querySelectorAll('.delete-btn');
     const listContainer = document.querySelector('.books-list');
     delBtn.forEach((element, index) => {
@@ -75,5 +75,5 @@ export default class List {
         this.deleteBook();
       });
     });
-  }
+  };
 }

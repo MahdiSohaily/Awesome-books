@@ -14,7 +14,7 @@ const currentDate = DateTime.now();
 date.innerHTML = currentDate.toFormat('DDD t');
 
 // function to create new object of default display module
-function defaultDisplay() {
+ const defaultDisplay = () => {
   const myList = new List();
   container.innerHTML = myList.content;
   myList.displayData();
