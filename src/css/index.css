@@ -7,6 +7,15 @@
   --clr-neutral-300: hsl(0 0% 81%);
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--clr-neutral-300);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-secondary-500) ;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -250,10 +259,13 @@ td {
   background-color: seagreen;
   position: absolute;
   left: 50%;
+  bottom: -230px;
   transform: translateX(-50%);
-  padding: 18px 100px;
+  padding: 18px 80px;
+  width: 400px;
   border-radius: 4px;
   color: white;
+  text-align: center;
   transition: all 0.5s ease-in-out;
 }
 
@@ -263,7 +275,9 @@ td {
 
 /* footer styles */
 footer {
-  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   padding: 1.5rem 1rem;
   background-color: var(--clr-secondary-400);
 }
