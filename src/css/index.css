@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--clr-neutral-300);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-secondary-500);
+}
+
 :root {
   --clr-primary-400: hsl(263 55% 52%);
   --clr-secondary-400: hsl(217 19% 35%);
@@ -5,15 +14,6 @@
   --clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-200: hsl(210 46% 95%);
   --clr-neutral-300: hsl(0 0% 81%);
-}
-
-::-webkit-scrollbar {
-  width: 7px;
-  background-color: var(--clr-neutral-300);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--clr-secondary-500) ;
 }
 
 /* Box sizing rules */
@@ -259,7 +259,7 @@ td {
   background-color: seagreen;
   position: absolute;
   left: 50%;
-  bottom: -230px;
+  bottom: -330px;
   transform: translateX(-50%);
   padding: 18px 80px;
   width: 400px;

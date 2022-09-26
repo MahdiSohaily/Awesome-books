@@ -20,8 +20,7 @@ export default class Form {
                         </button>
                     </div>
                 </form>
-                </div>
-                <p class='message'></p>
+                </div><p class='message'></p>
         </section>
         `;
   }
