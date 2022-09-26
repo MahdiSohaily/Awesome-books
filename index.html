@@ -10,28 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 </head>
 
 <body>
     <header>
-        <nav class="main-header">
+        <nav class="main-header container">
             <a class="logo" href="javascript:void(0)">Awesome Book</a>
             <ul class="nav-menu">
                 <li><a class="list-item" href="javascript:void(0)" data-display="list">List</a></li>
                 <li><a class="list-item" href="javascript:void(0)" data-display="form">Add New</a></li>
                 <li><a class="list-item" href="javascript:void(0)" data-display="contact">Contact</a></li>
-                
+
             </ul>
         </nav>
     </header>
-    <main id="app" class="full-height">
+    <main class="full-height">
+        <div class="container">
+            <p class="text-right date mx-3"></p>
+        </div>
+        <div id="app" class="flex-center"></div>
         <!-- New data are going to be displayed here -->
     </main>
     <footer>
-        <p>Copy Right are reserved</p>
+        <div class="container">
+            <p class="mx-3">Copy Right are reserved</p>
+        </div>
     </footer>
-    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
 </body>
 
 </html>

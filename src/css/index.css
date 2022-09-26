@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--clr-neutral-300);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-secondary-500);
+}
+
 :root {
   --clr-primary-400: hsl(263 55% 52%);
   --clr-secondary-400: hsl(217 19% 35%);
@@ -102,6 +111,15 @@ select {
   border: 2px solid gray;
 }
 
+.text-right {
+  text-align: right;
+  color: var(--clr-secondary-400);
+}
+
+.bg-primary {
+  background-color: var(--clr-primary-400);
+}
+
 /* Main header section styles */
 header {
   position: fixed;
@@ -111,9 +129,12 @@ header {
   background-color: white;
 }
 
-.main-header {
+.container {
   max-width: 90%;
   margin-inline: auto;
+}
+
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,9 +166,12 @@ header {
 }
 
 main {
+  padding-top: 7rem;
+}
+
+.flex-center {
   display: flex;
   justify-content: center;
-  padding-top: 7rem;
 }
 
 .card {
@@ -157,9 +181,25 @@ main {
 }
 
 /* table styles */
-
 .table {
   width: 100%;
+  border-spacing: 0;
+}
+
+tr {
+  height: 50px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(239, 239, 239);
+}
+
+tbody tr:nth-child(even):hover {
+  background-color: rgb(247, 246, 246);
+}
+
+tbody tr:nth-child(odd):hover {
+  background-color: rgb(228, 227, 227);
 }
 
 td {
@@ -177,6 +217,11 @@ td {
   margin: 0.35rem;
 }
 
+.clearfix {
+  overflow: hidden;
+}
+
+/* form section styles */
 .data-form {
   display: flex;
   justify-content: center;
@@ -202,6 +247,30 @@ td {
   width: 80px;
   margin-inline: auto;
   padding: 0.25rem 2rem;
+}
+
+/* Form submission message */
+.relative {
+  position: relative;
+}
+
+.message {
+  display: inline-block;
+  background-color: seagreen;
+  position: absolute;
+  left: 50%;
+  bottom: -330px;
+  transform: translateX(-50%);
+  padding: 18px 80px;
+  width: 400px;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.showMessage {
+  bottom: -230px;
 }
 
 /* footer styles */
