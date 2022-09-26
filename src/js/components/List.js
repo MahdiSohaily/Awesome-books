@@ -1,4 +1,5 @@
 export default class List {
+  // constructor function to set the data for List of book page
   constructor() {
     this._content = `
         <section class="card" aria-labelledby="project-name">
@@ -21,10 +22,12 @@ export default class List {
         `;
   }
 
+  // Getter function to get page content
   get content() {
     return this._content;
   }
 
+  // Function to return stored data in the HTML format
   append(index, { _title: title, _author: author }) {
     return `
           <tr class='clearfix'>
@@ -42,6 +45,7 @@ export default class List {
           </tr>`;
   }
 
+  // A function to display stored data in the HTML format in the List page
   displayData() {
     const dataStored = localStorage.getItem('books');
     const books = JSON.parse(dataStored);
@@ -55,6 +59,7 @@ export default class List {
     }
   }
 
+  // A function to delete indicated element from local storage and DOM tree
   deleteBook() {
     const delBtn = document.querySelectorAll('.delete-btn');
     delBtn.forEach((element, index) => {
