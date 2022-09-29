@@ -50,7 +50,7 @@ export default class List {
     const dataStored = localStorage.getItem('books');
     const books = JSON.parse(dataStored);
     const listContainer = document.querySelector('.books-list');
-    if (books.length > 0) {
+    if (books && books.length > 0) {
       for (const item in books) {
         listContainer.innerHTML += this.append(item, books[item]);
       }
